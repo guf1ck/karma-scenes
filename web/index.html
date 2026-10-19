@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyan Scenes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="pencil" viewBox="0 0 24 24"><path d="m16 3 5 5-12 12-6 1 1-6L16 3Zm-2 3 5 5"/></symbol>
+    <symbol id="palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 1-4c-1-1 0-3 2-3h1c5 0 4-11-6-11Z"/><circle cx="7" cy="10" r="1"/><circle cx="11" cy="7" r="1"/><circle cx="16" cy="8" r="1"/><circle cx="6" cy="14" r="1"/></symbol>
+    <symbol id="distance" viewBox="0 0 24 24"><path d="M3 7v10M21 7v10M7 12h10m-7-3-3 3 3 3m4-6 3 3-3 3"/></symbol>
+    <symbol id="chevron" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol>
+  </svg>
+  <main id="editor" class="editor" hidden>
+    <section class="panel" role="dialog" aria-labelledby="title" aria-modal="true">
+      <header><h1 id="title">PLACE SCENE</h1></header>
+      <form id="scene-form" novalidate>
+        <div class="fields">
+          <div class="text-field">
+            <label for="scene-text"><svg><use href="#pencil"/></svg>TEXT</label>
+            <div class="input-wrap">
+              <input id="scene-text" placeholder="Enter text." autocomplete="off" spellcheck="false" aria-describedby="counter error">
+              <span id="counter">0/198</span>
+            </div>
+          </div>
+          <div class="field" data-field="color">
+            <label id="color-label"><svg><use href="#palette"/></svg>COLOR</label>
+            <div class="select" id="color-select"></div>
+          </div>
+          <div class="field" data-field="size">
+            <label id="size-label"><span class="type-icon">Tt</span>FONT <span class="size-word">SIZE</span></label>
+            <div class="select" id="size-select"></div>
+          </div>
+          <div class="field" data-field="distance">
+            <label id="distance-label"><svg><use href="#distance"/></svg>DISTANCE</label>
+            <div class="select" id="distance-select"></div>
+          </div>
+          <p id="error" role="alert" hidden></p>
+        </div>
+        <button class="submit" type="submit">SUBMIT</button>
+      </form>
+    </section>
+    <footer class="hints"><span><kbd>↵</kbd> SELECT</span><i></i><button id="close" type="button"><kbd>ESC</kbd> CLOSE</button></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
