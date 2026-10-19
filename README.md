@@ -251,7 +251,7 @@ If this resource helps your server, consider **starring this GitHub repository â
 **Published by:** Karma Developments  
 **Resource:** Karma Scenes V  
 **Manifest version:** `1.0.1`  
-**Manifest author field:** `Ocean`  
+**Manifest author field:** `ANTUNES - Karma Developments`  
 **Bundled fonts:** Barlow (see `web/fonts/Barlow-OFL.txt` for the font's license terms).
 
 The script is distributed as a **free resource**. A separate software license for the script was **not specified in the supplied ZIP**. Add your chosen `LICENSE` file before publicly granting reuse, redistribution, or modification rights.
